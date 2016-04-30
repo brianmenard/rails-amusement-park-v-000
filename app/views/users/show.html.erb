@@ -1,0 +1,19 @@
+<h1>User show path</h1>
+<% if @message %>
+  <div class="center alert">
+    <p><%= @message %></p>
+  </div>
+<% end %>
+<%=@user.name%><br>
+<%if @user.admin%>
+ADMIN<br>
+<%end%>
+Height: <%=@user.height%> inches<br>
+Happiness:<%=@user.happiness%><br>
+Tickets: <%=@user.tickets%><br>
+Nausea: <%=@user.nausea%><br>
+Mood: <%=@user.mood%><br>
+<br><br>
+<%=link_to "See attractions", attractions_path%>
+<br><br>
+<%=link_to "Log Out", '/session', method:'delete'%>
